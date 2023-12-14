@@ -21,7 +21,7 @@ struct Business: Decodable {
     var name: String?
     var phone: String?
     var price: String?
-    var rating: Int?
+    var rating: Double?
     var review_count: Int?
     var url: String?
 }
