@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Business: Decodable {
+struct Business: Identifiable, Decodable {
     var alias: String?
     var categories: [Category]?
     var coordinates: Coordinate?
