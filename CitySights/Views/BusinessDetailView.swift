@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct BusinessDetailView: View {
-    var business: Business?
+    @Environment(BusinessViewModel.self) var vm
+    
+    
     
     var body: some View {
+        let business = vm.selectedBusiness
+        
         VStack(spacing: 0) {
             ZStack (alignment: .trailing){
                 Image(.detailPlaceholder)

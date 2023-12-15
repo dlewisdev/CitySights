@@ -18,6 +18,7 @@
 		715EC7D32B2A9E210033DC1C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7CC2B2A9E200033DC1C /* Category.swift */; };
 		715EC7D72B2B68980033DC1C /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7D62B2B68980033DC1C /* TextHelper.swift */; };
 		715EC7D92B2B6B0A0033DC1C /* BusinessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7D82B2B6B0A0033DC1C /* BusinessDetailView.swift */; };
+		715EC7FB2B2CD6860033DC1C /* BusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7FA2B2CD6860033DC1C /* BusinessViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		715EC7CF2B2A9E210033DC1C /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
 		715EC7D62B2B68980033DC1C /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 		715EC7D82B2B6B0A0033DC1C /* BusinessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailView.swift; sourceTree = "<group>"; };
+		715EC7FA2B2CD6860033DC1C /* BusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		715EC7A32B2A42F30033DC1C /* CitySights */ = {
 			isa = PBXGroup;
 			children = (
+				715EC7F92B2CD6780033DC1C /* ViewModel */,
 				715EC7DB2B2B70640033DC1C /* App */,
 				715EC7DA2B2B70540033DC1C /* Views */,
 				715EC7D52B2B68860033DC1C /* Helpers */,
@@ -130,6 +133,14 @@
 				715EC7A42B2A42F30033DC1C /* CitySightsApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		715EC7F92B2CD6780033DC1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				715EC7FA2B2CD6860033DC1C /* BusinessViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				715EC7B52B2A6E5B0033DC1C /* DataService.swift in Sources */,
 				715EC7A72B2A42F30033DC1C /* ContentView.swift in Sources */,
 				715EC7D02B2A9E210033DC1C /* Location.swift in Sources */,
+				715EC7FB2B2CD6860033DC1C /* BusinessViewModel.swift in Sources */,
 				715EC7D92B2B6B0A0033DC1C /* BusinessDetailView.swift in Sources */,
 				715EC7D22B2A9E210033DC1C /* Business.swift in Sources */,
 				715EC7D12B2A9E210033DC1C /* BusinessSearch.swift in Sources */,

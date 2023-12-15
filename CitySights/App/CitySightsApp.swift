@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CitySightsApp: App {
+    @State var vm = BusinessViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(vm)
         }
     }
 }
