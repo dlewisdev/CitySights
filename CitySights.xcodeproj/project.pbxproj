@@ -21,6 +21,8 @@
 		715EC7FB2B2CD6860033DC1C /* BusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7FA2B2CD6860033DC1C /* BusinessViewModel.swift */; };
 		715EC7FD2B2CDA500033DC1C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7FC2B2CDA500033DC1C /* MapView.swift */; };
 		715EC7FF2B2CDA960033DC1C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7FE2B2CDA960033DC1C /* ListView.swift */; };
+		71D3142C2B2D2AAD0078BC7E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D3142B2B2D2AAD0078BC7E /* OnboardingView.swift */; };
+		71D3142E2B2D2F080078BC7E /* OnboardingViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D3142D2B2D2F080078BC7E /* OnboardingViewDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		715EC7FA2B2CD6860033DC1C /* BusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewModel.swift; sourceTree = "<group>"; };
 		715EC7FC2B2CDA500033DC1C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		715EC7FE2B2CDA960033DC1C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		71D3142B2B2D2AAD0078BC7E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		71D3142D2B2D2F080078BC7E /* OnboardingViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				715EC7D82B2B6B0A0033DC1C /* BusinessDetailView.swift */,
 				715EC7FC2B2CDA500033DC1C /* MapView.swift */,
 				715EC7FE2B2CDA960033DC1C /* ListView.swift */,
+				71D3142B2B2D2AAD0078BC7E /* OnboardingView.swift */,
+				71D3142D2B2D2F080078BC7E /* OnboardingViewDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,7 +233,9 @@
 				715EC7FB2B2CD6860033DC1C /* BusinessViewModel.swift in Sources */,
 				715EC7D92B2B6B0A0033DC1C /* BusinessDetailView.swift in Sources */,
 				715EC7D22B2A9E210033DC1C /* Business.swift in Sources */,
+				71D3142C2B2D2AAD0078BC7E /* OnboardingView.swift in Sources */,
 				715EC7FF2B2CDA960033DC1C /* ListView.swift in Sources */,
+				71D3142E2B2D2F080078BC7E /* OnboardingViewDetails.swift in Sources */,
 				715EC7D12B2A9E210033DC1C /* BusinessSearch.swift in Sources */,
 				715EC7A52B2A42F30033DC1C /* CitySightsApp.swift in Sources */,
 				715EC7D32B2A9E210033DC1C /* Category.swift in Sources */,
