@@ -17,8 +17,25 @@ struct BusinessDetailView: View {
         
         VStack(spacing: 0) {
             ZStack (alignment: .trailing){
-                Image(.detailPlaceholder)
-                    .resizable()
+                
+                if let imageUrl = business?.imageUrl {
+                    
+                    AsyncImage(url: URL(string: imageUrl)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 164)
+                            .clipped()
+                            
+                    } placeholder: {
+                        ProgressView()
+                    }
+
+                } else {
+                    Image(.detailPlaceholder)
+                        .resizable()
+                }
+                
                 VStack {
                     Spacer()
                     Image(.yelpAttribution)
