@@ -10,8 +10,8 @@ import SwiftUI
 struct OnboardingView: View {
     @State var selectedViewIndex = 0
     @Environment(\.dismiss) var dismiss
-    
-    var body: some View {        
+    @Environment(BusinessViewModel.self) var vm
+    var body: some View {
         ZStack {
             Color(selectedViewIndex == 0 ? Color(red: 111/255, green: 154/255, blue: 189/255) : Color(red: 139/255, green: 166/255, blue: 65/255))
                 .ignoresSafeArea()
@@ -26,6 +26,9 @@ struct OnboardingView: View {
                 .tag(0)
                 
                 OnboardingViewDetails(bgColor: Color(Color(red: 139/255, green: 166/255, blue: 65/255)), headline: "Discover your city", subHeadline: "We'll show you the best restaurants, venues, and more, based on your location.") {
+                    
+                    //Ask user for permission to locate
+                    vm.getUserLocation()
                     dismiss()
                 }
                 .tag(1)
