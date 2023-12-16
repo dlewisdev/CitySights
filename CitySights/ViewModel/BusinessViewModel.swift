@@ -35,8 +35,10 @@ class BusinessViewModel: NSObject, CLLocationManagerDelegate {
     func getUserLocation() {
         //Check if we have permission
         if locationManager.authorizationStatus == .authorizedWhenInUse {
+            
             currentUserLocation = nil
             locationManager.requestLocation()
+            
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
@@ -55,9 +57,11 @@ class BusinessViewModel: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // Most recent location is the last index in the locations array
-        currentUserLocation = locations.last?.coordinate
-        if currentUserLocation != nil {
+        
+        if currentUserLocation == nil {
+            // Most recent location is the last index in the locations array
+            currentUserLocation = locations.last?.coordinate
+            
             // Call business search
             getBusinesses()
         }
