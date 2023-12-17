@@ -75,10 +75,23 @@ struct BusinessDetailView: View {
                         HStack {
                             Image(systemName: "phone")
                                 .padding(.trailing)
-                            Text(business?.displayPhone ?? "")
-                            Spacer()
-                            Image(systemName: "arrow.right")
-                                .bold()
+                            
+                            if let url = URL(string: "tel:\(business?.phone ?? "")") {
+                                Link(destination: url) {
+                                    Text(business?.displayPhone ?? "")
+                                        .foregroundStyle(.black)
+                                    Spacer()
+                                    Image(systemName: "arrow.right")
+                                        .bold()
+                                }
+                            } else {
+                                Text(business?.displayPhone ?? "")
+                                Spacer()
+                                Image(systemName: "arrow.right")
+                                    .bold()
+                            }
+                            
+                           
                         }
                         .padding(.vertical, 12)
                         
@@ -87,11 +100,23 @@ struct BusinessDetailView: View {
                         HStack {
                             Image(systemName: "globe")
                                 .padding(.trailing)
-                            Text(business?.url ?? "")
-                                .lineLimit(1)
-                            Spacer()
-                            Image(systemName: "arrow.right")
-                                .bold()
+                            
+                            if let url = URL(string: "\(business?.url ?? "")") {
+                                Link(destination: url) {
+                                    Text(business?.url ?? "")
+                                        .lineLimit(1)
+                                        .foregroundStyle(.black)
+                                    Spacer()
+                                    Image(systemName: "arrow.right")
+                                        .bold()
+                                }
+                            } else {
+                                Text(business?.url ?? "")
+                                    .lineLimit(1)
+                                Spacer()
+                                Image(systemName: "arrow.right")
+                                    .bold()
+                            }
                         }
                         .padding(.vertical, 12)
                         
@@ -103,8 +128,6 @@ struct BusinessDetailView: View {
                                 .padding(.trailing)
                             Text("\(business?.reviewCount ?? 0) reviews")
                             Spacer()
-                            Image(systemName: "arrow.right")
-                                .bold()
                         }
                         .padding(.vertical, 12)
                         

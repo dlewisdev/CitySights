@@ -34,11 +34,11 @@ struct DataService {
         //Add query
         if query != nil && query != "" {
             // Removes illegal characters and replaces them with characters allowed in query strings
-            endpointUrlString.append("&term=\(query!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))")
+            endpointUrlString.append("&term=\(query!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")")
         }
         //Add options
         if options != nil && options != "" {
-            endpointUrlString.append("&attributes=\(options)")
+            endpointUrlString.append("&attributes=\(options ?? "")")
         }
         
         //Add category
