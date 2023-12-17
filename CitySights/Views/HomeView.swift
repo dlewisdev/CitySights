@@ -30,6 +30,17 @@ struct HomeView: View {
                             showOptions = true
                         }
                     }
+                    .onSubmit {
+                        withAnimation {
+                            showOptions = false
+                        }
+                        
+                            queryBoxFocused = false
+                        
+                        vm.getBusinesses(query: query,
+                                         options: getOptionsString(),
+                                         category: categorySelection)
+                    }
                 
                 Button {
                     //Perform a search
@@ -54,10 +65,9 @@ struct HomeView: View {
                 }
                 
             }
-            .padding(.horizontal)
+            .padding()
             
             //Query options. Show if text box is focused.
-          
             if showOptions {
                     VStack {
                         Toggle("Popular", isOn: $popularOn)
@@ -90,7 +100,25 @@ struct HomeView: View {
             .padding(.horizontal)
             
             // Show map or list
-            if selectedTab == 1 {
+            if vm.locationAuthStatus == .denied {
+                
+                Spacer()
+                Text("Please allow location services for this app to see sights near you.")
+                    .padding(.horizontal)
+               
+                Button {
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    Text("Open App Privacy Settings")
+
+                }
+                .buttonStyle(.bordered)
+                
+                Spacer()
+            }
+            else if selectedTab == 1 {
                 MapView()
                     .onTapGesture {
                         withAnimation {
@@ -107,9 +135,6 @@ struct HomeView: View {
                         }
                     }
             }
-        }
-        .onAppear {
-            vm.getBusinesses(query: nil, options: nil, category: nil)
         }
         .sheet(item: $vm.selectedBusiness) { item in
             BusinessDetailView()

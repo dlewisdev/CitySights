@@ -72,30 +72,33 @@ struct BusinessDetailView: View {
                         
                         Divider()
                         
-                        HStack {
-                            Image(systemName: "phone")
-                                .padding(.trailing)
-                            
-                            if let url = URL(string: "tel:\(business?.phone ?? "")") {
-                                Link(destination: url) {
-                                    Text(business?.displayPhone ?? "")
-                                        .foregroundStyle(.black)
+                        if let phoneListed = business?.displayPhone {
+                            HStack {
+                                Image(systemName: "phone")
+                                    .padding(.trailing)
+                                
+                                if let url = URL(string: "tel:\(business?.phone ?? "")") {
+                                    Link(destination: url) {
+                                        Text(phoneListed)
+                                            .foregroundStyle(.black)
+                                        Spacer()
+                                        Image(systemName: "arrow.right")
+                                            .bold()
+                                    }
+                                } else {
+                                    Text(phoneListed)
                                     Spacer()
                                     Image(systemName: "arrow.right")
                                         .bold()
                                 }
-                            } else {
-                                Text(business?.displayPhone ?? "")
-                                Spacer()
-                                Image(systemName: "arrow.right")
-                                    .bold()
+                                
+                                
                             }
+                            .padding(.vertical, 12)
                             
-                           
+                            
+                            Divider()
                         }
-                        .padding(.vertical, 12)
-                        
-                        Divider()
                         
                         HStack {
                             Image(systemName: "globe")

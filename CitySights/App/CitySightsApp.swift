@@ -25,7 +25,7 @@ struct CitySightsApp: App {
                 }
                 .onAppear {
                     //If no onboarding is needed, still get location
-                    if needsOnboarding == false {
+                    if needsOnboarding == false && vm.locationAuthStatus == .notDetermined {
                         vm.getUserLocation()
                     }
                 }
