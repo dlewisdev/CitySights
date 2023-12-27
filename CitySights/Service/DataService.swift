@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-struct a {
+struct DataService {
     
     let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String
     
