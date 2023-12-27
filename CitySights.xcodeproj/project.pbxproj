@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71408B6C2B3BA86500DB48D3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7B42B2A6E5B0033DC1C /* DataService.swift */; };
 		715EC7A52B2A42F30033DC1C /* CitySightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7A42B2A42F30033DC1C /* CitySightsApp.swift */; };
 		715EC7A72B2A42F30033DC1C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7A62B2A42F30033DC1C /* HomeView.swift */; };
 		715EC7A92B2A42F40033DC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715EC7A82B2A42F40033DC1C /* Assets.xcassets */; };
 		715EC7AC2B2A42F40033DC1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715EC7AB2B2A42F40033DC1C /* Preview Assets.xcassets */; };
-		715EC7B52B2A6E5B0033DC1C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7B42B2A6E5B0033DC1C /* DataService.swift */; };
 		715EC7D02B2A9E210033DC1C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7CE2B2A9E210033DC1C /* Location.swift */; };
 		715EC7D12B2A9E210033DC1C /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7CF2B2A9E210033DC1C /* BusinessSearch.swift */; };
 		715EC7D22B2A9E210033DC1C /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715EC7CD2B2A9E210033DC1C /* Business.swift */; };
@@ -226,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				715EC7D72B2B68980033DC1C /* TextHelper.swift in Sources */,
-				715EC7B52B2A6E5B0033DC1C /* DataService.swift in Sources */,
+				71408B6C2B3BA86500DB48D3 /* DataService.swift in Sources */,
 				715EC7A72B2A42F30033DC1C /* HomeView.swift in Sources */,
 				715EC7FD2B2CDA500033DC1C /* MapView.swift in Sources */,
 				715EC7D02B2A9E210033DC1C /* Location.swift in Sources */,
